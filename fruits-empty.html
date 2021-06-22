@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="styles2.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <div class="split left imageChanger" :style="{ backgroundImage: 'url(' + imageFruit + ')' }"></div>
+
+    <div class="split right">
+        <div @mouseover="imageFruit = 'orange.jpg'" class="boutonFruits" @mouseout="imageFruit='all-fruits.jpg'"> orange</div>
+        <div @mouseover="imageFruit = 'kiwi.jpg'" class="boutonFruits" @mouseout="imageFruit='all-fruits.jpg'"> kiwi</div>
+        <div @mouseover="imageFruit = 'banane.jpg'" class="boutonFruits" @mouseout="imageFruit='all-fruits.jpg'"> banane</div>
+        <div @mouseover="imageFruit ='cerise.jpg'" class="boutonFruits" @mouseout="imageFruit='all-fruits.jpg'"> cerise</div>
+        <div @mouseover="imageFruit ='peche.jpg'" class="boutonFruits" @mouseout="imageFruit='all-fruits.jpg'"> peche</div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script>-
+    new Vue({
+        el: '#app',
+        data: {
+            imageFruit:'all-fruits.jpg',
+        },
+        computed: {}
+    })
+</script>
+</body>
+</html>
